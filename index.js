@@ -51,19 +51,20 @@ $(function() {
 		//  format the header containing the api key
 		//
 
-		// var curlURL = "curl 'https://api.propublica.org/congress/v1/115/house/committees/HSJU.json' -H  'X-API-Key: tr01appWsv9smpaUvKL4v33q6inxoKlU6lsnOL1J'"
+		var curlURL = "curl 'https://api.propublica.org/congress/v1/115/house/committees/HSJU.json' -H 'X-API-Key: tr01appWsv9smpaUvKL4v33q6inxoKlU6lsnOL1J'"
 
-		var curlURL = "'https://api.propublica.org/congress/v1/115/house/committees/HSJU.json' -H  'X-API-Key: tr01appWsv9smpaUvKL4v33q6inxoKlU6lsnOL1J'"
+		// var curlURL = "'https://api.propublica.org/congress/v1/115/house/committees/HSJU.json' -H  'X-API-Key: tr01appWsv9smpaUvKL4v33q6inxoKlU6lsnOL1J'"
 
 // $.getJSON(curlURL, returnResults);
 
 $.ajax({
     url: curlURL,
-    dataType: 'json',
+    dataType: 'jsonp',
     type: 'get',
     success: function(data) {
         var json_response = data;
         alert(data);
+        returnResults(data);
       }
 });
 
