@@ -1,0 +1,36 @@
+body {
+  padding-top: 20px;
+  font-family:  Roboto;
+  background-color:  #262673;  /* very dark blue */
+  color:  white;
+}
+
+.centerit {
+	text-align: center;
+}
+
+.clearit {
+	margin-top: 20px;
+	clear: left;
+}
+
+.hidden {
+	display: none;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #ff6666;
+  color: black;
+}
+
+.button {
+	color: black;
+	font-size: 14px;
+	background-color: #ffff99;
+	border: 1px solid black;
+	text-decoration: none;
+	padding: 5px;
+	margin-top: 10px;
+	border-radius: 25px;
+}
