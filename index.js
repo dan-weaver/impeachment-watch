@@ -39,7 +39,7 @@ function returnResults(data) {
 
 
 function getJ(searchobject, callback) {
-	$.getJSON(BASE_URL, 
+	$.getJSON(BASE_URL,
 						searchobject,
 						callback)
 }
@@ -51,7 +51,7 @@ $(function() {
 		//  format the header containing the api key
 		//
 
-		var curlURL = "curl 'https://api.propublica.org/congress/v1/115/house/committees/HSJU.json' -H 'X-API-Key: tr01appWsv9smpaUvKL4v33q6inxoKlU6lsnOL1J'"
+	var curlURL = "https://api.propublica.org/congress/v1/115/house/committees/HSJU.json";
 
 		// var curlURL = "'https://api.propublica.org/congress/v1/115/house/committees/HSJU.json' -H  'X-API-Key: tr01appWsv9smpaUvKL4v33q6inxoKlU6lsnOL1J'"
 
@@ -59,7 +59,9 @@ $(function() {
 
 $.ajax({
     url: curlURL,
-    dataType: 'jsonp',
+		headers : {
+			'X-API-Key': 'tr01appWsv9smpaUvKL4v33q6inxoKlU6lsnOL1J'
+		},
     type: 'get',
     success: function(data) {
         var json_response = data;
